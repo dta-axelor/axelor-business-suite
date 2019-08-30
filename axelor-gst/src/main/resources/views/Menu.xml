@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_5.0.xsd">
+
+	<menuitem title="GST" name="gst-product"/>
+	<menuitem name="gst-product-cat" parent="gst-product" title="Product-Category" action="action-gst-product"/>
+	<action-view name="action-gst-product" title="Product-Category" model="com.axelor.apps.base.db.ProductCategory">
+	<view type="grid" name="product-category-grid"/>
+	<view type="form" name="product-category-form"/>
+	</action-view>
+	
+	<menuitem name="gst-address" parent="gst-product" title="State" action="action-gst-address"/>
+	<action-view name="action-gst-address" title="State" model="com.axelor.apps.gst.db.State">
+	<view type="grid" name="state-grid"/>
+	<view type="form" name="state-form"/>
+	</action-view>
+	
+</object-views>	
